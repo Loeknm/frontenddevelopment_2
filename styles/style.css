@@ -29,3 +29,22 @@
 
 /* jouw code */
 
+ol a:nth-of-type(1) img {
+    width: 42px;
+	height: 42px;
+}
+ol a:nth-of-type(2) img {
+ width: 80px;
+ height: 80px;
+}
+
+a {
+	color: black;
+
+}
+
+p {
+	font-family: Eurostar;
+
+
+}
