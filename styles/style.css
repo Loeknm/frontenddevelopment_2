@@ -1,6 +1,6 @@
-//
+
 /* CSS REMEDY */
-//
+
 *, *::after, *::before {
   box-sizing:border-box;  
 }
@@ -15,7 +15,7 @@
 /*/
 :root {
 
-	/* startje */
+	startje
 	--color-text:#111;
 	--color-background:#eee; 
 
@@ -26,17 +26,22 @@
 
 //
 /* JOUW STYLING */
-//
+
 
 /* jouw code */
+
+html {
+	overflow-x: hidden;
+}
 body {
     font-size: 16px;
-	margin: 0;
+	margin: 0 !important;
 	padding: 0;
-	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vw;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
    
 }
 
@@ -61,7 +66,7 @@ body {
 
 p {
 	font-family: sans-serif;
-	padding-left: 1em;
+	padding-left: 	1em;
 }
 
 figcaption {
@@ -93,6 +98,8 @@ section {
 
 header {
 	width: 100%;
+	background-color: #f2f2f2;
+
 
 }
 header p {
@@ -105,11 +112,20 @@ nav {
 nav ul:nth-of-type(1) {  
 	display: flex; 
     list-style-type: none; 
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
-	padding-left: 4%;
+	padding-left: 0;
+	margin-top: 0;
+	padding-top: 2em;
 	
 }
+nav ul:nth-of-type(1) li:nth-of-type(1) {
+	padding-left: 1em;
+}
+nav ul:nth-of-type(1) li:nth-of-type(3) {
+	padding: 0 2.5em 0 2.5em;
+}
+
 
 nav ul:nth-of-type(2) {  
 	display: flex;
@@ -126,13 +142,16 @@ nav ul li:nth-child(2) a {
     text-decoration: none;
 	margin: 0 2em;
 	color: #222;
+	font-family: sans-serif;
+	font-weight:normal;
 
-	font-weight:bold
 }
 
 nav p {
 	padding-left: 1em;
 	font-weight: bold;
+	padding-bottom: 2em;
+	padding-top: 1em;
 }
 
 section:nth-of-type(1) {
@@ -220,14 +239,14 @@ section:nth-of-type(2) div:nth-of-type(2) {
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
+	margin-left: 1em;
 }
 section:nth-of-type(2) div:nth-of-type(3) {
 	margin-bottom: 1.3em;
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
+	margin-left: 1em;
 }
 
 section:nth-of-type(2) div:nth-of-type(4) {
@@ -235,8 +254,7 @@ section:nth-of-type(2) div:nth-of-type(4) {
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
-	border-bottom-left-radius: 1em;
+	margin-left: 1em;	
 }
 
 section:nth-of-type(2) div:nth-of-type(5) {
@@ -244,7 +262,14 @@ section:nth-of-type(2) div:nth-of-type(5) {
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
+	margin-left: 1em;
+}
+section:nth-of-type(2) div p {
+	padding-left: 0 !important;
+}
+
+section:nth-of-type(2) div h3 {
+	padding-left: 0 !important;
 }
 
 section:nth-of-type(2) div h3  {
@@ -349,8 +374,18 @@ section:nth-of-type(3) ul {
 	list-style-type: none;
 	width: 320%;
 	margin-top: 5em;
-	padding-left: 0
-	;
+	padding-left: 0;
+	overflow: auto;
+	scroll-behavior: smooth;
+	scroll-snap-type: mandatory;
+}
+
+article:first-of-type {
+	display: flex;
+	overflow: auto;
+	scroll-behavior: smooth;
+	scroll-snap-type: mandatory;
+	vertical-align: middle;
 }
 /* Einde styling section 3 */
 
@@ -375,14 +410,8 @@ section:nth-of-type(4) h3 {
     font-size: 1.6em;
 }
 
-section:nth-of-type(4) div:nth-of-type(1) { /* styling van de buttons in section 4 */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
 
-section:nth-of-type(4) div:nth-of-type(1) button:nth-of-type(1) { /* First button */
+section:nth-of-type(4) button:nth-of-type(1) { /* First button */
     background-color: #000000;
     color: #ffffff;
     border: 2px solid #ffffff;
@@ -400,12 +429,20 @@ section:nth-of-type(4) img:nth-of-type(1) {
     max-width: 100%;
 }
 
+section:nth-of-type(4) div:nth-of-type(1) {
+    margin-bottom: 1.3em;
+    border-bottom: 0.1em solid #ffffff;
+    padding-bottom: 0.8em;
+    width: 20em;
+    margin-left: 1em;
+}
+
 section:nth-of-type(4) div:nth-of-type(2) {
     margin-bottom: 1.3em;
     border-bottom: 0.1em solid #ffffff;
     padding-bottom: 0.8em;
     width: 20em;
-    padding-left: 1em;
+    margin-left: 1em;;
 }
 
 section:nth-of-type(4) div:nth-of-type(3) {
@@ -413,16 +450,15 @@ section:nth-of-type(4) div:nth-of-type(3) {
     border-bottom: 0.1em solid #ffffff;
     padding-bottom: 0.8em;
     width: 20em;
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
-section:nth-of-type(4) div:nth-of-type(4) {
-    margin-bottom: 1.3em;
-    border-bottom: 0.1em solid #ffffff;
-    padding-bottom: 0.8em;
-    width: 20em;
-    padding-left: 1em;
-    border-bottom-left-radius: 1em;
+section:nth-of-type(4) div p {
+	padding-left: 0 !important;
+}
+
+section:nth-of-type(4) div h3 {
+	padding-left: 0 !important;
 }
 
 section:nth-of-type(4) a {
@@ -436,17 +472,17 @@ section:nth-of-type(4) img:nth-of-type(2) {
     width: 100%;
 }
 
-section:nth-of-type(4) div:nth-of-type(1) button:nth-of-type(2) { /* Second button */
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    margin: 0 auto;
-    font-weight: bold;
-    padding-bottom: 0.5em;
+section:nth-of-type(4) button:nth-of-type(2) { /* Second button */
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	margin: 0 auto;
+	font-weight: bold;
+	
 }
 
 section:nth-of-type(4) img:nth-of-type(3) {
@@ -528,23 +564,31 @@ section:nth-of-type(6) div:nth-of-type(1) {
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
+	margin-left: 1em;
 }
 section:nth-of-type(6) div:nth-of-type(2) {
 	margin-bottom: 1.3em;
 	border-bottom: 0.1em solid #ffffff;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
+	margin-left: 1em;
 }
 
 section:nth-of-type(6) div:nth-of-type(3) {
 	margin-bottom: 1.3em;
 	padding-bottom: 0.8em;
 	width: 20em;
-	padding-left: 1em;
-
+	margin-left: 1em;
 }
+
+section:nth-of-type(6) div p {
+	padding-left: 0 !important;
+}
+
+section:nth-of-type(6) div h3 {
+	padding-left: 0 !important;
+}
+
 
 /* hier start het carousel*/
 .carousel {
@@ -553,19 +597,21 @@ section:nth-of-type(6) div:nth-of-type(3) {
     max-width: 30em;
     overflow: hidden;
     background-color: white;
-	padding-left: 2em;
 	padding-top: 4em;
+	margin-left: 2em;
 	
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease;
+	margin-right: 1em;
+	width: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
-    padding: 2em;
+    padding: 1em;
     box-sizing: border-box;
     text-align: left;
 }
@@ -602,15 +648,40 @@ section:nth-of-type(7) button {
 }
 
 .prev {
-    left: 1em;
+    left: -0.5em;
 	
 }
 
 .next {
-    right: 1em;
+    right: 3em;
 }
+
 /* Hier eindigt het carousel*/
 
+section:nth-of-type(8) div:first-of-type {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section:nth-of-type(8) button:first-of-type {
+	width: 14em;
+    padding: 1em;
+    margin: 1em 0 1em;
+	font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+	background-color: #ffffff;
+    color: rgb(26, 142, 209);
+	font-weight: bold;
+	border: solid 3px rgb(26, 142, 209);
+	
+}
+
+article:first-of-type img:nth-of-type(1) {
+	padding-left: 1em;
+}
 
 	
 
